@@ -1,0 +1,39 @@
+[background arg="res://assets/black.png" fade="0.0"]
+...
+[background arg="res://assets/restaurantKitchen.jpg" fade="0.0"]
+join shrimp rightmost
+shrimp: Boss? The fried rice is uhhh... done.
+shrimp: I'm not feeling very confident about it though...
+join boss leftmost
+boss: I'm sure it'll be fine, shrimp. Even in the worst case, we'll still get some publicity.
+shrimp: Alright boss. Good luck!
+leave shrimp
+[background arg="res://assets/restaurantSeating.jpg" fade="0.0"]
+join gordon center
+boss: Mr. Ramsay, your fried rice.
+gordon: Oh, that was fast! While I was waiting, I was enjoying this restaurant's most pleasant interior.
+boss: Good to hear, Mr. Ramsay. I hope you will enjoy the rice as well.
+gordon: Me too.
+(Gordon eats a bite of the rice)
+(He raises an eyebrow as he chews...)
+(It doesn't look like he likes it...)
+gordon: Sir, bring me to the kitchen immediately.
+boss: Um-
+gordon: I need to have a word with the quote-on-quote CHEF that made this rice.
+boss: I'm afraid we can't-
+(Gordon's stare is filled with anger)
+(The boss sighs in defeat)
+boss: Very well...
+[background arg="res://assets/restaurantKitchen.jpg" fade="0.0"]
+join gordon left
+join shrimp rightmost
+gordon: ...
+shrimp: ...
+boss: ...
+gordon: You're telling me a SHRIMP fried my rice?
+leave boss
+leave gordon
+leave shrimp
+[background arg="res://assets/badEndCinematic.png" fade="0.0"]
+[wait time="10.0"]
+[background arg="res://assets/black.png" fade="0.0"]

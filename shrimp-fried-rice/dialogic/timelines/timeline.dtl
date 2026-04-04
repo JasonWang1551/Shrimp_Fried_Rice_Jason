@@ -1,0 +1,10 @@
+[background arg="res://assets/restaurantSeating.jpg" fade="0.0"]
+join gordon center
+gordon: Ohhhh I cannot wait to have a plate of this legendary shrimp fried rice...
+join boss leftmost
+boss: Of course, Mr. Ramsay! It will be ready shortly.
+leave gordon
+[background arg="res://assets/restaurantKitchen.jpg" fade="0.0"]
+join shrimp rightmost
+boss: Alright, shrimp! He wants one of your signerature fried rices!
+shrimp: Yes, boss!

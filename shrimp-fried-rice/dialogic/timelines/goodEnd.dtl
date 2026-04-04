@@ -1,0 +1,33 @@
+[background arg="res://assets/goodEndBG.png" fade="0.0"]
+EXCELLENT WORK!
+[signal arg="restartTheMusic"]
+[background arg="res://assets/restaurantKitchen.jpg" fade="0.0"]
+join shrimp rightmost
+shrimp: Boss, the fried rice is ready to be served!!
+join boss leftmost
+boss: Excellent, excellent. Mr. Ramsay will be most pleased...
+leave shrimp
+[background arg="res://assets/restaurantSeating.jpg" fade="0.0"]
+boss: Mr. Ramsay, your fried rice.
+join gordon center
+gordon: Oh, that was fast! And it looks wonderful! Let's hope the taste is also up to par...
+(Gordon Ramsay eats a bite of the fried rice)
+(It looks like... he likes it!)
+gordon: My god! I am pleasantly surprised by the flavor of this dish!
+gordon: May I meet the chef who prepared this?
+boss: ...
+boss: uhm...
+gordon: Please, I insist on seeing this talent that you have recruited!
+(the boss sighs in defeat)
+boss: Very well, Mr. Ramsay...
+[background arg="res://assets/restaurantKitchen.jpg" fade="0.0"]
+join gordon left
+join shrimp rightmost
+gordon: ...
+shrimp: ...
+boss: ...
+gordon: You're telling me a SHRIMP fried my rice?
+leave boss
+leave gordon
+leave shrimp
+[background arg="res://assets/black.png" fade="0.0"]

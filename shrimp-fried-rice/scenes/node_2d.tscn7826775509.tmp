@@ -1,0 +1,425 @@
+[gd_scene load_steps=39 format=3 uid="uid://b5rcj3sq3ced"]
+
+[ext_resource type="Script" uid="uid://nfkyfojou8jg" path="res://scenes/main.gd" id="1_4vge2"]
+[ext_resource type="Script" uid="uid://bnya8owhvgio7" path="res://scenes/QuickTimeBar.gd" id="1_rnjyy"]
+[ext_resource type="Texture2D" uid="uid://ccc8guhbic377" path="res://assets/pointer.png" id="2_rnjyy"]
+[ext_resource type="Texture2D" uid="uid://1m3n1tr6jqwe" path="res://assets/meterBack.png" id="3_3m5ht"]
+[ext_resource type="Texture2D" uid="uid://c0o6p3rgeai18" path="res://assets/meterSafe.png" id="5_dubn7"]
+[ext_resource type="Texture2D" uid="uid://pedmyn0qeg3j" path="res://assets/fire1.PNG" id="6_0q20i"]
+[ext_resource type="Texture2D" uid="uid://b3ueaf614p8me" path="res://assets/fire2.PNG" id="7_qv8l0"]
+[ext_resource type="Texture2D" uid="uid://c1qetd2m272wa" path="res://assets/fireempty.png" id="8_hh0fu"]
+[ext_resource type="Texture2D" uid="uid://baf17gmyktgja" path="res://assets/fire3.PNG" id="8_k6u5g"]
+[ext_resource type="Script" uid="uid://bqlgd2277snem" path="res://scenes/fire.gd" id="10_dubn7"]
+[ext_resource type="Texture2D" uid="uid://2iqavd1jffi6" path="res://assets/rice_cooked_frame1.png" id="11_coh8c"]
+[ext_resource type="Texture2D" uid="uid://b0bs4euqf282k" path="res://assets/rice_overcooked_frame1.png" id="11_nuk1v"]
+[ext_resource type="Texture2D" uid="uid://qgeeihgn13r5" path="res://assets/rice_cooked_frame2.png" id="12_kmyi7"]
+[ext_resource type="Texture2D" uid="uid://dqfk8hvy1akf6" path="res://assets/rice_overcooked_frame2.png" id="12_l0qat"]
+[ext_resource type="Texture2D" uid="uid://bbfaao35cdqdp" path="res://assets/rice_cooked_frame3.png" id="13_ey6mn"]
+[ext_resource type="Texture2D" uid="uid://xvm7si24xxh2" path="res://assets/rice_overcooked_frame3.png" id="13_wpu3o"]
+[ext_resource type="Texture2D" uid="uid://bsoth8rciddu6" path="res://assets/rice_cooked_frame4.png" id="14_2sxpt"]
+[ext_resource type="Texture2D" uid="uid://dfgwnaf6v1jdd" path="res://assets/rice_overcooked_frame4.png" id="14_g3arh"]
+[ext_resource type="Script" uid="uid://do7jkw4ddocty" path="res://scenes/wok.gd" id="15_0q20i"]
+[ext_resource type="Texture2D" uid="uid://bsqjp0f6qk1rb" path="res://assets/indicGood.png" id="15_3kg8w"]
+[ext_resource type="Script" uid="uid://c4hiw1ei8lhkq" path="res://scenes/tosser.gd" id="15_x63s8"]
+[ext_resource type="Texture2D" uid="uid://c5woryqw4uoh5" path="res://assets/indicBad.png" id="16_x63s8"]
+[ext_resource type="AudioStream" uid="uid://d1ukitffl0w38" path="res://sound/jazzfriedrice.wav" id="19_qv8l0"]
+[ext_resource type="Texture2D" uid="uid://0rdnooxliiff" path="res://assets/rice_undercooked_frame1.png" id="19_unr0g"]
+[ext_resource type="Texture2D" uid="uid://d2o6kw5yfx44j" path="res://assets/rice_undercooked_frame2.png" id="20_jt3n0"]
+[ext_resource type="Texture2D" uid="uid://hby7x01ur7a1" path="res://assets/gameKitchin.png" id="20_k6u5g"]
+[ext_resource type="Texture2D" uid="uid://m2mljljix8xc" path="res://assets/rice_undercooked_frame3.png" id="21_7pfoh"]
+[ext_resource type="Texture2D" uid="uid://d3ensyidkrbqv" path="res://assets/rice_undercooked_frame4.png" id="22_mchk4"]
+[ext_resource type="Texture2D" uid="uid://tmgg2xx326v2" path="res://assets/titlescreen_frame1.png" id="29_wpu3o"]
+[ext_resource type="Texture2D" uid="uid://ctx3f8otf8bvp" path="res://assets/titlescreen_frame2.png" id="30_g3arh"]
+[ext_resource type="Texture2D" uid="uid://6egygcmuga5" path="res://assets/saltFail.png" id="31_7pfoh"]
+[ext_resource type="Texture2D" uid="uid://bnkqk22nd5glf" path="res://assets/salt1.PNG" id="32_mchk4"]
+[ext_resource type="Texture2D" uid="uid://he6ftyfg3poi" path="res://assets/salt2.PNG" id="33_gmqbl"]
+[ext_resource type="Texture2D" uid="uid://iwgjbmph77j" path="res://assets/saltSuccess.png" id="34_qkxkb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dubn7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0q20i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qv8l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k6u5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qv8l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0q20i")
+}],
+"loop": true,
+"name": &"active fire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0q20i")
+}],
+"loop": true,
+"name": &"babyframe",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hh0fu")
+}],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0q20i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_nuk1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l0qat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wpu3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_g3arh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wpu3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l0qat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nuk1v")
+}],
+"loop": false,
+"name": &"overCycleFast",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_nuk1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l0qat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wpu3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_g3arh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wpu3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l0qat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nuk1v")
+}],
+"loop": false,
+"name": &"overCycleIdeal",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_nuk1v")
+}],
+"loop": false,
+"name": &"overStill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_coh8c")
+}],
+"loop": true,
+"name": &"still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_coh8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kmyi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ey6mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2sxpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ey6mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kmyi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_coh8c")
+}],
+"loop": false,
+"name": &"tossCycleFast",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_coh8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kmyi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ey6mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2sxpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ey6mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kmyi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_coh8c")
+}],
+"loop": false,
+"name": &"tossCycleIdeal",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_unr0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jt3n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7pfoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mchk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7pfoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jt3n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_unr0g")
+}],
+"loop": false,
+"name": &"underCycleFast",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_unr0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jt3n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7pfoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mchk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7pfoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jt3n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_unr0g")
+}],
+"loop": false,
+"name": &"underCycleIdeal",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_unr0g")
+}],
+"loop": true,
+"name": &"underStill",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_unr0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_wpu3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_g3arh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8pa6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_7pfoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hh0fu")
+}],
+"loop": false,
+"name": &"fail",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_mchk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_gmqbl")
+}],
+"loop": true,
+"name": &"pour",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_qkxkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hh0fu")
+}],
+"loop": false,
+"name": &"success",
+"speed": 1.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4vge2")
+
+[node name="QTEbar" type="Node2D" parent="."]
+script = ExtResource("1_rnjyy")
+
+[node name="meter" type="Sprite2D" parent="QTEbar"]
+texture_filter = 1
+position = Vector2(1010, 312)
+texture = ExtResource("3_3m5ht")
+
+[node name="pointer" type="Sprite2D" parent="QTEbar"]
+z_index = 1
+texture_filter = 1
+position = Vector2(1012, 314)
+texture = ExtResource("2_rnjyy")
+
+[node name="safezone" type="Sprite2D" parent="QTEbar"]
+texture_filter = 1
+position = Vector2(1010, 312)
+texture = ExtResource("5_dubn7")
+
+[node name="start" type="Marker2D" parent="QTEbar"]
+position = Vector2(1012, 536)
+
+[node name="safestart" type="Marker2D" parent="QTEbar"]
+position = Vector2(1011, 360)
+
+[node name="safeend" type="Marker2D" parent="QTEbar"]
+position = Vector2(1011, 264)
+
+[node name="end" type="Marker2D" parent="QTEbar"]
+position = Vector2(1011, 88)
+
+[node name="Fire" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(603.5, 452.5)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_dubn7")
+animation = &"active fire"
+script = ExtResource("10_dubn7")
+
+[node name="fireAnimTimer" type="Timer" parent="Fire"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Wok" type="AnimatedSprite2D" parent="."]
+position = Vector2(574.5, 335.5)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_0q20i")
+animation = &"tossCycleIdeal"
+script = ExtResource("15_0q20i")
+
+[node name="Tosser" type="Node2D" parent="."]
+script = ExtResource("15_x63s8")
+
+[node name="goodIndicator" type="Sprite2D" parent="Tosser"]
+position = Vector2(1010, 187)
+texture = ExtResource("15_3kg8w")
+
+[node name="badIndicator" type="Sprite2D" parent="Tosser"]
+texture_filter = 1
+position = Vector2(1010, 187)
+texture = ExtResource("16_x63s8")
+
+[node name="gameDuration" type="Timer" parent="Tosser"]
+wait_time = 20.0
+one_shot = true
+
+[node name="AudioBGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_qv8l0")
+autoplay = true
+
+[node name="AudioVictory" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AudioDefeat" type="AudioStreamPlayer2D" parent="."]
+
+[node name="kitchenBG" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579, 327)
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("20_k6u5g")
+
+[node name="TitleScreen" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(577, 320)
+scale = Vector2(0.6, 0.542658)
+sprite_frames = SubResource("SpriteFrames_unr0g")
+frame_progress = 0.463338
+
+[node name="saltCan" type="AnimatedSprite2D" parent="."]
+position = Vector2(793, 122)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_k8pa6")
+animation = &"success"
+frame_progress = 0.948914
+
+[connection signal="playRiceStill" from="." to="Wok" method="_on_playRiceStill"]
+[connection signal="startFireQTE" from="." to="QTEbar" method="_on_startFireQTE"]
+[connection signal="startSaltGame" from="." to="QTEbar" method="_on_startSaltGame"]
+[connection signal="startTossing" from="." to="Tosser" method="_on_startTossing"]
+[connection signal="QTEfail" from="QTEbar" to="." method="_on_QTEfail"]
+[connection signal="fireFailed" from="QTEbar" to="Fire" method="_on_fireFailed"]
+[connection signal="fireLit" from="QTEbar" to="." method="_on_fireLit"]
+[connection signal="fireLit" from="QTEbar" to="Fire" method="_on_fireLit"]
+[connection signal="saltFailed" from="QTEbar" to="." method="_on_QTEsaltFailed"]
+[connection signal="saltSuccess" from="QTEbar" to="." method="_on_QTEsaltSuccess"]
+[connection signal="timeout" from="Fire/fireAnimTimer" to="Fire" method="_on_fireTimerTimeout"]
+[connection signal="badTossFast" from="Tosser" to="." method="_on_tossFast"]
+[connection signal="badTossSlow" from="Tosser" to="." method="_on_tossSlow"]
+[connection signal="goodToss" from="Tosser" to="." method="_on_goodToss"]
+[connection signal="tossFast" from="Tosser" to="Wok" method="_on_tossFast"]
+[connection signal="tossNormal" from="Tosser" to="." method="_on_tossNormal"]
+[connection signal="tossNormal" from="Tosser" to="Wok" method="_on_tossNormal"]
+[connection signal="tossSlow" from="Tosser" to="Wok" method="_on_tossSlow"]
+[connection signal="timeout" from="Tosser/gameDuration" to="Tosser" method="_on_timeUp"]
