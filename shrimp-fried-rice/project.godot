@@ -8,6 +8,10 @@
 
 config_version=5
 
+[Fmod]
+
+General/banks_path="res://sound/Build/Desktop"
+
 [animation]
 
 compatibility/default_parent_skeleton_in_mesh_instance_3d=true
@@ -22,6 +26,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+FmodManager="*uid://cds10pm7hwn3p"
 
 [dialogic]
 
@@ -80,7 +85,7 @@ project/assembly_name="Shrimp Fried Rice"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/fmod/plugin.cfg")
 
 [input]
 

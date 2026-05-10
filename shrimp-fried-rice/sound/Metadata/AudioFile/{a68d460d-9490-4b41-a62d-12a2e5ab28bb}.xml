@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{a68d460d-9490-4b41-a62d-12a2e5ab28bb}">
+		<property name="assetPath">
+			<value>MiniGameThemePercussion.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>56.000022675736965</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f74f0ffe-d386-4e17-a18b-c1431de312b4}</destination>
+		</relationship>
+	</object>
+</objects>

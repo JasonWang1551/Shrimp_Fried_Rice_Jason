@@ -22,14 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://bsqjp0f6qk1rb" path="res://assets/indicGood.png" id="15_3kg8w"]
 [ext_resource type="Script" uid="uid://c4hiw1ei8lhkq" path="res://scenes/tosser.gd" id="15_x63s8"]
 [ext_resource type="Texture2D" uid="uid://c5woryqw4uoh5" path="res://assets/indicBad.png" id="16_x63s8"]
-[ext_resource type="AudioStream" uid="uid://d1ukitffl0w38" path="res://sound/jazzfriedrice.wav" id="19_qv8l0"]
 [ext_resource type="Texture2D" uid="uid://cgt1cradf4pb4" path="res://assets/rice_undercooked_frame1.png" id="19_unr0g"]
 [ext_resource type="Texture2D" uid="uid://c73x0nqc1kpr1" path="res://assets/rice_undercooked_frame2.png" id="20_jt3n0"]
 [ext_resource type="Texture2D" uid="uid://hby7x01ur7a1" path="res://assets/gameKitchin.png" id="20_k6u5g"]
 [ext_resource type="Texture2D" uid="uid://djfaj6t211wxl" path="res://assets/rice_undercooked_frame3.png" id="21_7pfoh"]
 [ext_resource type="Texture2D" uid="uid://daeuodyfffnl3" path="res://assets/rice_undercooked_frame4.png" id="22_mchk4"]
-[ext_resource type="AudioStream" uid="uid://1wrelkj52yak" path="res://sound/victory.wav" id="28_gmqbl"]
-[ext_resource type="AudioStream" uid="uid://jc0xs8wmxg2m" path="res://sound/defeat.wav" id="29_qkxkb"]
 [ext_resource type="Texture2D" uid="uid://cr1o07515bu5e" path="res://assets/title_frame1.png" id="31_4bto7"]
 [ext_resource type="Texture2D" uid="uid://6egygcmuga5" path="res://assets/saltFail.png" id="31_7pfoh"]
 [ext_resource type="Texture2D" uid="uid://bnkqk22nd5glf" path="res://assets/salt1.PNG" id="32_mchk4"]
@@ -451,17 +448,6 @@ position = Vector2(1038, 147)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("40_6r0o2")
 
-[node name="AudioBGM" type="AudioStreamPlayer2D" parent="." unique_id=29131441]
-stream = ExtResource("19_qv8l0")
-autoplay = true
-
-[node name="AudioVictory" type="AudioStreamPlayer2D" parent="." unique_id=1616479152]
-stream = ExtResource("28_gmqbl")
-
-[node name="AudioDefeat" type="AudioStreamPlayer2D" parent="." unique_id=1213949372]
-stream = ExtResource("29_qkxkb")
-autoplay = true
-
 [node name="TitleScreen" type="AnimatedSprite2D" parent="." unique_id=1201529425]
 visible = false
 position = Vector2(577, 320)
@@ -492,24 +478,101 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_hiivq")
 animation = &"tossingInstructions"
 
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=676272654]
+bank_paths = ["res://sound/Build/Desktop/Master.strings.bank", "res://sound/Build/Desktop/Master.bank"]
+
+[node name="TitleMusic" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=1696997885]
+event_name = "event:/Music/Title"
+event_guid = "{83f7c131-5b47-45b4-bb5e-becaca6b2f8e}"
+volume = 0.7
+
+[node name="StartDialogueMusic" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=1467695650]
+event_name = "event:/Music/StartDialogue"
+event_guid = "{1a59ac59-28cd-4447-a469-6d891895ca18}"
+volume = 0.7
+
+[node name="MinigameMusic" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=72001934]
+event_name = "event:/Music/Minigame"
+event_guid = "{02ad6843-e7ad-44ad-b358-737a92e20044}"
+volume = 0.7
+fmod_parameters/CurrentlyPassing/id = -588709642460334193
+fmod_parameters/CurrentlyPassing = "NotEnough"
+fmod_parameters/CurrentlyPassing/labels = PackedStringArray("NotEnough", "No", "Yes")
+fmod_parameters/CurrentlyPassing/variant_type = 4
+
+[node name="FryHissSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=555880191]
+event_name = "event:/Sfx/FryHiss"
+event_guid = "{f66df583-6e83-436a-8fa5-7e674c8f13c8}"
+
+[node name="DefeatDialogueMusic" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=1570980034]
+event_name = "event:/Music/Defeat"
+event_guid = "{aed8b733-311d-4414-af68-90906100ba22}"
+fmod_parameters/InDialogue/id = 7939498856668299814
+fmod_parameters/InDialogue = "No"
+fmod_parameters/InDialogue/labels = PackedStringArray("No", "Yes")
+fmod_parameters/InDialogue/variant_type = 4
+
+[node name="VictoryDialogueMusic" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=1914283163]
+event_name = "event:/Music/Victory"
+event_guid = "{8ce8e9fa-3131-4526-b079-95b7bcb750c4}"
+fmod_parameters/InDialogue/id = 7939498856668299814
+fmod_parameters/InDialogue = "No"
+fmod_parameters/InDialogue/labels = PackedStringArray("No", "Yes")
+fmod_parameters/InDialogue/variant_type = 4
+
+[node name="GordonDialogueSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=876240311]
+event_name = "event:/Dialogue/GordonDialogue"
+event_guid = "{3463e81b-4502-4219-9948-1ee02be6fd68}"
+
+[node name="BossDialogueSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=457670214]
+event_name = "event:/Dialogue/BossDialogue"
+event_guid = "{b367d973-651f-46e8-8ddb-ef8401d92d58}"
+
+[node name="ShrimpDialogueSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=1096642184]
+event_name = "event:/Dialogue/ShrimpDialogue"
+event_guid = "{ca84ff4d-0052-44b7-b100-600b944fe8ce}"
+
+[node name="ShrimpHappySfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=1563001011]
+event_name = "event:/Sfx/ShrimpHappy"
+event_guid = "{3139c3e4-18f0-40fd-997f-8dedaf0fd12d}"
+
+[node name="ShrimpSadSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=884103772]
+event_name = "event:/Sfx/ShrimpSad"
+event_guid = "{19bb11ab-8639-4af5-b79a-0c3fd0ea1607}"
+
+[node name="SaltSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=2080313624]
+event_name = "event:/Sfx/Salt"
+event_guid = "{1517d727-7ebf-43bf-88a1-bdc536b7f611}"
+volume = 1.4
+
+[node name="StoveOnSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=622613185]
+event_name = "event:/Sfx/StoveOn"
+event_guid = "{ed3bd680-1e28-4bcd-a395-4044962ceb5d}"
+
+[node name="StoveLightingSfx" type="FmodEventEmitter2D" parent="FmodBankLoader" unique_id=850437009]
+event_name = "event:/Sfx/StoveLighting"
+event_guid = "{03baaf59-ae1a-4540-832f-21b2a1214574}"
+
 [connection signal="playRiceStill" from="." to="Wok" method="_on_playRiceStill"]
 [connection signal="startFireQTE" from="." to="QTEbar" method="_on_startFireQTE"]
 [connection signal="startSaltGame" from="." to="QTEbar" method="_on_startSaltGame"]
 [connection signal="startTossing" from="." to="Tosser" method="_on_startTossing"]
 [connection signal="QTEfail" from="QTEbar" to="." method="_on_QTEfail"]
 [connection signal="clackQTE" from="QTEbar" to="shrimpHands" method="_on_clackQTE"]
+[connection signal="fireFailed" from="QTEbar" to="." method="_on_fireFailed"]
 [connection signal="fireFailed" from="QTEbar" to="Fire" method="_on_fireFailed"]
 [connection signal="fireLit" from="QTEbar" to="." method="_on_fireLit"]
 [connection signal="fireLit" from="QTEbar" to="Fire" method="_on_fireLit"]
 [connection signal="saltFailed" from="QTEbar" to="." method="_on_QTEsaltFailed"]
 [connection signal="saltSuccess" from="QTEbar" to="." method="_on_QTEsaltSuccess"]
 [connection signal="timeout" from="Fire/fireAnimTimer" to="Fire" method="_on_fireTimerTimeout"]
+[connection signal="badToss" from="Tosser" to="." method="_on_badToss"]
 [connection signal="badTossFast" from="Tosser" to="." method="_on_tossFast"]
 [connection signal="badTossSlow" from="Tosser" to="." method="_on_tossSlow"]
 [connection signal="clackToss" from="Tosser" to="shrimpHands" method="_on_clackToss"]
 [connection signal="goodToss" from="Tosser" to="." method="_on_goodToss"]
+[connection signal="niceToss" from="Tosser" to="." method="_on_niceToss"]
 [connection signal="tossFast" from="Tosser" to="Wok" method="_on_tossFast"]
 [connection signal="tossNormal" from="Tosser" to="." method="_on_tossNormal"]
 [connection signal="tossNormal" from="Tosser" to="Wok" method="_on_tossNormal"]
 [connection signal="timeout" from="Tosser/gameDuration" to="Tosser" method="_on_timeUp"]
-[connection signal="finished" from="AudioVictory" to="." method="_on_audio_victory_finished"]

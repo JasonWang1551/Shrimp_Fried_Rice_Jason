@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{314ff294-afc7-44ea-9e88-beb9e9614701}">
+		<property name="assetPath">
+			<value>SFRDialogue - 0010 - Audio - Audio 09.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f74f0ffe-d386-4e17-a18b-c1431de312b4}</destination>
+		</relationship>
+	</object>
+</objects>

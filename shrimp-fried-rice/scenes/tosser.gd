@@ -6,12 +6,16 @@ extends Node2D
 @onready var fastPic : Sprite2D = $fast
 @onready var slowPic : Sprite2D = $slow
 @onready var nicePic : Sprite2D = $nice
+@onready var fryHissSfx : FmodEventEmitter2D = $"../FmodBankLoader/FryHissSfx"
 
 signal tossNormal
 signal tossSlow
 signal tossFast
 
 signal tossingDone
+signal liveTossStateChanged(click_count: int, score_count: int, average: float)
+signal niceToss
+signal badToss
 
 var gameOn = false
 var hitRate
@@ -24,6 +28,7 @@ var lowBound = 0.7
 var highBound = 0.9
 
 var scoreList = Array()
+var clickCount = 0
 
 var speedState
 # 0 = slow
@@ -63,9 +68,11 @@ func _on_startTossing() -> void:
 	gameOn = true
 	firstTap = true
 	scoreList.clear()
+	clickCount = 0
 	showBad()
 	show()
 	timerGame.start()
+	_emit_live_toss_state()
 
 signal clackToss
 
@@ -73,6 +80,7 @@ func _process(delta: float) -> void:
 	if gameOn:
 		if Input.is_action_just_pressed("click"):
 			clackToss.emit()
+			clickCount += 1
 			currTime = Time.get_ticks_msec() / 1000.0
 			if firstTap:
 				lastClickTime = currTime
@@ -88,8 +96,20 @@ func _process(delta: float) -> void:
 				print(speedState)
 				scoreList.append(speedState)
 			toss()
+			_emit_live_toss_state()
+
+func _emit_live_toss_state() -> void:
+	var average := -1.0
+	var length := scoreList.size()
+	if length > 0:
+		var sum := 0
+		for score in scoreList:
+			sum += score
+		average = float(sum) / float(length)
+	liveTossStateChanged.emit(clickCount, length, average)
 
 func toss():
+	fryHissSfx.play_one_shot()
 	if firstTap:
 		tossNormal.emit()
 		firstTap = false
@@ -97,14 +117,17 @@ func toss():
 		0:
 			showBad()
 			showSlow()
+			badToss.emit()
 			#tossSlow.emit()
 			tossNormal.emit()
 		1:
 			showGood()
+			niceToss.emit()
 			tossNormal.emit()
 		2:
 			showBad()
 			showFast()
+			badToss.emit()
 			tossFast.emit()
 		
 signal goodToss

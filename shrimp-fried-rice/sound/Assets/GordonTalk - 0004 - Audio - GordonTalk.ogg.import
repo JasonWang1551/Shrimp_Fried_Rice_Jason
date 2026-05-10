@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bj05kdh47b03b"
+path="res://.godot/imported/GordonTalk - 0004 - Audio - GordonTalk.ogg-05735f187bcd66736f9b36423ad52869.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/GordonTalk - 0004 - Audio - GordonTalk.ogg"
+dest_files=["res://.godot/imported/GordonTalk - 0004 - Audio - GordonTalk.ogg-05735f187bcd66736f9b36423ad52869.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

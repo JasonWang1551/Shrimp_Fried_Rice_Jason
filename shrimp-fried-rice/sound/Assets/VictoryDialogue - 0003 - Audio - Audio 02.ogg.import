@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ctsrglcxacpmb"
+path="res://.godot/imported/VictoryDialogue - 0003 - Audio - Audio 02.ogg-3b89e64993e5b7c7bb33b18c9cd2a36d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/VictoryDialogue - 0003 - Audio - Audio 02.ogg"
+dest_files=["res://.godot/imported/VictoryDialogue - 0003 - Audio - Audio 02.ogg-3b89e64993e5b7c7bb33b18c9cd2a36d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

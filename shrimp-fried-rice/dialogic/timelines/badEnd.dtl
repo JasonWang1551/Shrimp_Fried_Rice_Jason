@@ -8,6 +8,7 @@ join boss leftmost
 boss: I'm sure it'll be fine, shrimp. Even in the worst case, we'll still get some publicity.
 shrimp: Alright boss. Good luck!
 leave shrimp
+[signal arg="defeatDialogueOn"]
 [background arg="res://assets/restaurantSeating.jpg" fade="0.0"]
 join gordon center
 boss: Mr. Ramsay, your fried rice.
@@ -30,6 +31,7 @@ join shrimp rightmost
 gordon: ...
 shrimp: ...
 boss: ...
+[signal arg="defeatDialogueOff"]
 gordon: You're telling me a SHRIMP fried my rice?
 leave boss
 leave gordon

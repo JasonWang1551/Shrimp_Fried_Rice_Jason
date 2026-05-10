@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{54c16b6b-af59-4b24-aa43-0a54de4e873f}">
+		<property name="name">
+			<value>NumberSyllablesBoss</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d59a4714-35f2-4155-82b5-ecaa436617b2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7b6d9205-f3e1-412b-b51f-220e3e6be98e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7b6d9205-f3e1-412b-b51f-220e3e6be98e}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>31</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

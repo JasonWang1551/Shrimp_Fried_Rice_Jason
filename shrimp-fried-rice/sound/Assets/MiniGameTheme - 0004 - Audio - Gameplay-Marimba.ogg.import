@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fox12aqpu0f2"
+path="res://.godot/imported/MiniGameTheme - 0004 - Audio - Gameplay-Marimba.ogg-f77a47df8d36e8cea5fb360bf8adebaa.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/MiniGameTheme - 0004 - Audio - Gameplay-Marimba.ogg"
+dest_files=["res://.godot/imported/MiniGameTheme - 0004 - Audio - Gameplay-Marimba.ogg-f77a47df8d36e8cea5fb360bf8adebaa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{330fcccd-7040-49e8-8fd7-27dd6a55b3d0}">
+		<property name="name">
+			<value>MissAmount</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d59a4714-35f2-4155-82b5-ecaa436617b2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d5d9d1c3-c250-4ddc-8663-f46e6f47dc9d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d5d9d1c3-c250-4ddc-8663-f46e6f47dc9d}">
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ptwbhxx3xsmd"
+path="res://.godot/imported/Stove - 0003 - Audio - StoveLighting.ogg-c893e1bb1967dc0ef4095579a2db9962.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/Stove - 0003 - Audio - StoveLighting.ogg"
+dest_files=["res://.godot/imported/Stove - 0003 - Audio - StoveLighting.ogg-c893e1bb1967dc0ef4095579a2db9962.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

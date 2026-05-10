@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt6i4v2fai45a"
+path="res://.godot/imported/MiniGameTheme - 0009 - Audio - Gameplay-Violoncello.ogg-1b234095503e198a600699bbf2f34f53.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/MiniGameTheme - 0009 - Audio - Gameplay-Violoncello.ogg"
+dest_files=["res://.godot/imported/MiniGameTheme - 0009 - Audio - Gameplay-Violoncello.ogg-1b234095503e198a600699bbf2f34f53.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{acf4aa35-95d7-49bb-9348-4c61f250c295}">
+		<property name="name">
+			<value>NumberSyllablesGordon</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d59a4714-35f2-4155-82b5-ecaa436617b2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7818e5f7-0537-4770-870e-63a5eea4b1e5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7818e5f7-0537-4770-870e-63a5eea4b1e5}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>31</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

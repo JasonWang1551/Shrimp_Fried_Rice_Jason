@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6g0jxokjpbhi"
+path="res://.godot/imported/ShrimpTalk - 0009 - Audio - Audio 05.ogg-d10ee40db7cfc856fb927c56f941507d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/ShrimpTalk - 0009 - Audio - Audio 05.ogg"
+dest_files=["res://.godot/imported/ShrimpTalk - 0009 - Audio - Audio 05.ogg-d10ee40db7cfc856fb927c56f941507d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

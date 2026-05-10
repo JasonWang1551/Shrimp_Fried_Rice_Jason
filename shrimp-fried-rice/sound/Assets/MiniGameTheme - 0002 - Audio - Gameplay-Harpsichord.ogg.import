@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b36183uclqn7v"
+path="res://.godot/imported/MiniGameTheme - 0002 - Audio - Gameplay-Harpsichord.ogg-1504bbd415c5958dc80dcc6eda23059d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/MiniGameTheme - 0002 - Audio - Gameplay-Harpsichord.ogg"
+dest_files=["res://.godot/imported/MiniGameTheme - 0002 - Audio - Gameplay-Harpsichord.ogg-1504bbd415c5958dc80dcc6eda23059d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

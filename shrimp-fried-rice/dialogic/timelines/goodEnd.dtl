@@ -1,11 +1,11 @@
 [background arg="res://assets/goodEndBG.png" fade="0.0"]
 EXCELLENT WORK!
-[signal arg="restartTheMusic"]
 [background arg="res://assets/restaurantKitchen.jpg" fade="0.0"]
 join shrimp rightmost
 shrimp: Boss, the fried rice is ready to be served!!
 join boss leftmost
 boss: Excellent, excellent. Mr. Ramsay will be most pleased...
+[signal arg="victoryDialogueOn"]
 leave shrimp
 [background arg="res://assets/restaurantSeating.jpg" fade="0.0"]
 boss: Mr. Ramsay, your fried rice.
@@ -26,6 +26,7 @@ join shrimp rightmost
 gordon: ...
 shrimp: ...
 boss: ...
+[signal arg="victoryDialogueOff"]
 gordon: You're telling me a SHRIMP fried my rice?
 leave boss
 leave gordon

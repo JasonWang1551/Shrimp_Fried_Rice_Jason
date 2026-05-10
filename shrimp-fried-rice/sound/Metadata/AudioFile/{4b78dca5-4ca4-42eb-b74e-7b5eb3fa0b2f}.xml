@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{4b78dca5-4ca4-42eb-b74e-7b5eb3fa0b2f}">
+		<property name="assetPath">
+			<value>VictoryDialogue - 0004 - Audio - Audio 03.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.000022675736961</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f74f0ffe-d386-4e17-a18b-c1431de312b4}</destination>
+		</relationship>
+	</object>
+</objects>

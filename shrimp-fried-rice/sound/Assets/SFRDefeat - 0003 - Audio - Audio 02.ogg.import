@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dlcln3xey5e45"
+path="res://.godot/imported/SFRDefeat - 0003 - Audio - Audio 02.ogg-ae198366442f317ea200d733bf60153c.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/SFRDefeat - 0003 - Audio - Audio 02.ogg"
+dest_files=["res://.godot/imported/SFRDefeat - 0003 - Audio - Audio 02.ogg-ae198366442f317ea200d733bf60153c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

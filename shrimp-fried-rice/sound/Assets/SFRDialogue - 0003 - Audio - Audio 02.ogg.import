@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gfpmny8dfnti"
+path="res://.godot/imported/SFRDialogue - 0003 - Audio - Audio 02.ogg-6c4d2d52ed19eadfbcaa49f7c6f48647.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/Assets/SFRDialogue - 0003 - Audio - Audio 02.ogg"
+dest_files=["res://.godot/imported/SFRDialogue - 0003 - Audio - Audio 02.ogg-6c4d2d52ed19eadfbcaa49f7c6f48647.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

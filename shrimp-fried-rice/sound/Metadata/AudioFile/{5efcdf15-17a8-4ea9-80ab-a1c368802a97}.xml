@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{5efcdf15-17a8-4ea9-80ab-a1c368802a97}">
+		<property name="assetPath">
+			<value>BossTalk - 0006 - Audio - BossTalk.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.89192743764172333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f74f0ffe-d386-4e17-a18b-c1431de312b4}</destination>
+		</relationship>
+	</object>
+</objects>

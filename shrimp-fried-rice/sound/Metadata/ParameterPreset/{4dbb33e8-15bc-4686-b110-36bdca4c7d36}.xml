@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{4dbb33e8-15bc-4686-b110-36bdca4c7d36}">
+		<property name="name">
+			<value>RiceLevel</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d59a4714-35f2-4155-82b5-ecaa436617b2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{102e537c-36e1-4f90-89f3-f9f91b1458ab}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{102e537c-36e1-4f90-89f3-f9f91b1458ab}">
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
